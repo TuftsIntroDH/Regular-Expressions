@@ -1,0 +1,15 @@
+import re
+from collections import Counter
+
+# Normalize the text to lowercase
+sample_text = sample_text.lower()
+
+# Use regular expression to find all words
+words = re.findall(r'\b\w+\b', sample_text)
+
+# Count the frequency of each word
+word_counts = Counter(words)
+
+# Display the word counts
+for word, count in word_counts.items():
+    print(f'{word}: {count}')
